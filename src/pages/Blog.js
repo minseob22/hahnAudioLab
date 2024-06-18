@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Contact = () => {
+const Blog = () => {
   return <div>블로그 페이지</div>;
 };
 
