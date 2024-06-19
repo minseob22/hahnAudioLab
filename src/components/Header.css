@@ -1,38 +1,71 @@
+/* components/Header.css */
+
+header {
+  background-color: #f8f9fa;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
 .navbar {
-    background-color: #fff;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: right;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-toggler {
+  display: none;
+}
+
+.navbar-nav {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.nav-item {
+  margin-right: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar-toggler {
+    display: block;
   }
-  
-  .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: right;
-    width: 100%;
+
+  .navbar-collapse {
+    display: none;
   }
-  
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+
+  .navbar-collapse.show {
+    display: block;
   }
-  
-  .nav-links li {
-    display: inline;
+
+  .nav-item {
+    margin-right: 0;
+    margin-bottom: 10px;
   }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
-    transition: color 0.3s ease;
+
+  .nav-link {
+    display: block;
   }
-  
-  .nav-links a:hover {
-    color: #007bff;
-  }
-  
+}

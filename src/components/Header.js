@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import './Header.css';
 
 const Header = () => {
   return (
     <header>
       <div className="container">
-        <nav className="navbar navbar-expand-lg navbar-light">
+        <nav className="navbar navbar-expand">
           
-          <button
+          <button                   //줄 세게 아이콘 토클
             className="navbar-toggler"
             type="button"
             data-toggle="collapse"
@@ -17,25 +17,28 @@ const Header = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon">아이콘</span>
           </button>
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ml-auto">
-              <li className="nav-item">
-                <Link className="nav-link" to="/products">제품</Link>
+            <li className="nav-item">
+                <Link className="nav-link" to="/#home">Home</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/packages">패키지</Link>
+                <Link className="nav-link" to="/#products">Products</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/reviews">리뷰</Link>
+                <Link className="nav-link" to="/#packages">Packages</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/blog">블로그</Link>
+                <Link className="nav-link" to="/#reviews">Reviews</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/contact">문의</Link>
+                <Link className="nav-link" to="/#blog">Blog</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/#contact">Contact</Link>
               </li>
             </ul>
           </div>
