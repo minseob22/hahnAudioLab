@@ -1,0 +1,73 @@
+/* Philosophy.css */
+
+.philosophy-container {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 20px;
+  }
+  
+  .philosophy-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .philosophy-content {
+    display: flex;
+  }
+  
+  .image-box {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  .image-box img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .text-box {
+    flex: 2;
+    padding: 10px;
+  }
+  
+  .input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .input-container input {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .input-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .input-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  .text-container {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .text-container div {
+    margin-bottom: 10px;
+  }
+  
