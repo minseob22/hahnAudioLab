@@ -4,27 +4,27 @@ import Products from './pages/Products';
 import Packages from './pages/Packages';
 import Reviews from './pages/Reviews';
 import Blog from './pages/Blog';
+import Header from './components/Header';
+import Contact from './pages/Contact';
+import Philosophy from './pages/Philosophy';
 
 function App() {
   return (
+    <Router>
     <div>
-      <header>
-        <nav>
-          <a href="#home">Home</a>
-          <a href="#products">Products</a>
-          <a href="#packages">Packages</a>
-          <a href="#reviews">Reviews</a>
-          <a href="#blog">Blog</a>
-        </nav>
-      </header>
+      <Header />
       <main>
-        <Home />
-        <Products />
-        <Packages />
-        <Reviews />
-        <Blog />
+          <section id="home"><Home /></section> 
+          <section id="philosophy"><Philosophy /></section>
+          <section id="products"><Products /></section>
+          <section id="packages"><Packages /></section>
+          <section id="reviews"><Reviews /></section>
+          <section id="blog"><Blog /></section>
+          <section id="contact"><Contact/></section>
+          
       </main>
     </div>
+    </Router>
   );
 }
 
