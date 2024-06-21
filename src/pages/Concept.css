@@ -1,0 +1,40 @@
+.concept-container {
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .concept-title h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .concept-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+  }
+  
+  .concept-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .concept-image {
+    width: 100%;
+    max-width: 200px; /* 이미지 크기 조절 */
+    padding: 10px;
+  }
+  
+  .concept-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%; /* 이미지를 둥글게 만듦 */
+  }
+  
+  .concept-text {
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2em;
+  }
+  
