@@ -1,0 +1,34 @@
+/* src/styles/Reviews.css */
+
+.reviews-container {
+    padding: 20px;
+  }
+  
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .review-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  .review-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  .review-card h3 {
+    margin-top: 10px;
+  }
+  
+  .review-card p {
+    margin-top: 10px;
+    color: #666;
+  }
+  
