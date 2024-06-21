@@ -1,49 +1,35 @@
+// src/components/Header.js
+
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './Header.css';
+import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
+  const location = useLocation();
+
+  const handleLinkClick = (e, target) => {
+    if (location.pathname === '/') {
+      e.preventDefault();
+      const element = document.querySelector(target);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   return (
     <header>
-      <div className="container">
-        <nav className="navbar navbar-expand">
-          
-          <button                   //줄 세게 아이콘 토클
-            className="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon">아이콘</span>
-          </button>
-
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav ml-auto">
-            <li className="nav-item">
-                <Link className="nav-link" to="/#home">Home</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/#products">Products</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/#packages">Packages</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/#reviews">Reviews</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/#blog">Blog</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/#contact">Contact</Link>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
+      <nav>
+        <ul>
+          <li><Link to="/" onClick={(e) => handleLinkClick(e, '#home')}>Home</Link></li>
+          <li><Link to="/" onClick={(e) => handleLinkClick(e, '#philosophy')}>Philosophy</Link></li>
+          <li><Link to="/" onClick={(e) => handleLinkClick(e, '#concept')}>Concept</Link></li>
+          <li><Link to="/" onClick={(e) => handleLinkClick(e, '#products')}>Products</Link></li>
+          <li><Link to="/" onClick={(e) => handleLinkClick(e, '#packages')}>Packages</Link></li>
+          <li><Link to="/" onClick={(e) => handleLinkClick(e, '#reviews')}>Reviews</Link></li>
+          <li><Link to="/" onClick={(e) => handleLinkClick(e, '#blog')}>Blog</Link></li>
+          <li><Link to="/" onClick={(e) => handleLinkClick(e, '#contact')}>Contact</Link></li>
+        </ul>
+      </nav>
     </header>
   );
 };

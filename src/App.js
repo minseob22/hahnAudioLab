@@ -8,24 +8,34 @@ import Blog from './pages/Blog';
 import Header from './components/Header';
 import Contact from './pages/Contact';
 import Philosophy from './pages/Philosophy';
+import ReviewDetails from './pages/ReviewDetails';
+import ScrollToSection from './components/ScrollToSection';
 
 function App() {
   return (
     <Router>
-    <div>
-      <Header />
-      <main>
-          <section id="home"><Home /></section> 
-          <section id="philosophy"><Philosophy /></section>
-          <section id="concept"><Concept /></section>
-          <section id="products"><Products /></section>
-          <section id="packages"><Packages /></section>
-          <section id="reviews"><Reviews /></section>
-          <section id="blog"><Blog /></section>
-          <section id="contact"><Contact/></section>
-          
-      </main>
-    </div>
+      <ScrollToSection>
+        <div>
+          <Header />
+          <main>
+            <Routes>
+              <Route path="/" element={
+                <>
+                  <section id="home"><Home /></section> 
+                  <section id="philosophy"><Philosophy /></section>
+                  <section id="concept"><Concept /></section>
+                  <section id="products"><Products /></section>
+                  <section id="packages"><Packages /></section>
+                  <section id="reviews"><Reviews /></section>
+                  <section id="blog"><Blog /></section>
+                  <section id="contact"><Contact /></section>
+                </>
+              } />
+              <Route path="/review-details/:reviewId" element={<ReviewDetails />} />
+            </Routes>
+          </main>
+        </div>
+      </ScrollToSection>
     </Router>
   );
 }
