@@ -10,6 +10,8 @@ import Contact from './pages/Contact';
 import Philosophy from './pages/Philosophy';
 import ReviewDetails from './pages/ReviewDetails';
 import ScrollToSection from './components/ScrollToSection';
+import './App.css';
+
 
 function App() {
   return (
@@ -21,7 +23,7 @@ function App() {
             <Routes>
               <Route path="/" element={
                 <>
-                  <section id="home"><Home /></section> 
+                  <section id="home" className="no-margin"><Home /></section>
                   <section id="philosophy"><Philosophy /></section>
                   <section id="concept"><Concept /></section>
                   <section id="products"><Products /></section>
