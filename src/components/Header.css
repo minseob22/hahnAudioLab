@@ -1,72 +1,64 @@
+/* src/components/Header.css */
 
-header {
-  background-color: #f8f9fa;
-  padding: 10px 20px;
+.header {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: fixed;
-  width: 100%;
   top: 0;
+  width: 100%;
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.navbar {
+.nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: right;
   align-items: center;
+  padding: 1rem 0;
 }
 
-.navbar-toggler {
-  display: none;
-}
-
-.navbar-nav {
-  display: flex;
+.nav-list {
   list-style: none;
-  padding-left: 0;
+  display: flex;
+  gap: 2rem;
   margin: 0;
-  margin-left: auto;
+  padding: 0;
 }
 
-.nav-item {
-  margin-right: 20px;
-}
-
-.nav-link {
+.nav-item a {
   text-decoration: none;
   color: #333;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s;
 }
 
-.nav-link:hover {
-  color: #007bff;
+.nav-item a:hover {
+  color: #0073e6;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
 }
 
+nav ul li {
+  margin: 0 10px;
+}
 
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  
+}
 
-@media (max-width: 768px) {
-  .navbar-toggler {
-    display: block;
-  }
+nav ul li a:hover {
+  color: gray;
+}
 
-  .navbar-collapse {
-    display: none;
-  }
-
-  .navbar-collapse.show {
-    display: block;
-  }
-
-  .nav-item {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-
-  .nav-link {
-    display: block;
-  }
+/* 방문한 링크 스타일 설정 해제 */
+nav ul li a:visited {
+  color: gray;
+  text-decoration: none;
 }
