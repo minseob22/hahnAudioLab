@@ -27,7 +27,6 @@ function App() {
                   <section id="products"><Products /></section>
                   <section id="packages"><Packages /></section>
                   <section id="reviews"><Reviews /></section>
-                  <section id="blog"><Blog /></section>
                   <section id="contact"><Contact /></section>
                 </>
               } />
