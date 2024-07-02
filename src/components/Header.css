@@ -13,7 +13,7 @@
   display: flex;
   justify-content: right;
   align-items: center;
-  padding: 1rem 0;
+  padding: 2rem 0;
 }
 
 .nav-list {
@@ -27,8 +27,8 @@
 .nav-item a {
   text-decoration: none;
   color: #333;
-  font-weight: 500;
-  font-size: 1rem;
+  font-weight: 600;
+  font-size: 1.2rem;
   transition: color 0.3s;
 }
 
@@ -49,12 +49,14 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: black;
-  
+  color: gray;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 nav ul li a:hover {
   color: gray;
+ 
 }
 
 /* 방문한 링크 스타일 설정 해제 */

@@ -27,6 +27,7 @@ const Header = () => {
           <li className="nav-item"><Link to="/" onClick={(e) => handleLinkClick(e, '#products')}>Products</Link></li>
           <li className="nav-item"><Link to="/" onClick={(e) => handleLinkClick(e, '#packages')}>Packages</Link></li>
           <li className="nav-item"><Link to="/" onClick={(e) => handleLinkClick(e, '#reviews')}>Reviews</Link></li>
+          <li className="nav-item"><Link to="/" onClick={(e) => handleLinkClick(e, '#policy')}>Policy</Link></li>
           <li><a href="https://blog.naver.com/gksehdgns06" target="_blank" rel="noopener noreferrer">Blog</a></li>
           <li className="nav-item"><Link to="/" onClick={(e) => handleLinkClick(e, '#contact')}>Contact</Link></li>
         </ul>
