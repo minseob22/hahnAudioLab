@@ -1,6 +1,8 @@
 .product-container {
     padding: 40px;
     text-align: center;
+    
+    margin: 0 350px; /* 양옆에 마진 추가 */
 }
 
 .product-title h2 {

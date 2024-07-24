@@ -11,7 +11,8 @@ import Philosophy from './pages/Philosophy';
 import ReviewDetails from './pages/ReviewDetails';
 import ScrollToSection from './components/ScrollToSection';
 import './App.css';
-
+import Policy from './pages/Policy';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -29,13 +30,15 @@ function App() {
                   <section id="products"><Products /></section>
                   <section id="packages"><Packages /></section>
                   <section id="reviews"><Reviews /></section>
+                  <section id="policy"><Policy /></section>
                   <section id="contact"><Contact /></section>
                 </>
               } />
-              <Route path="/review-details/:reviewId" element={<ReviewDetails />} />
+              <Route path="/review-details/:id" element={<ReviewDetails />} />
             </Routes>
           </main>
         </div>
+        <Footer />
       </ScrollToSection>
     </Router>
   );

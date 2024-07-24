@@ -1,34 +1,54 @@
-/* src/styles/Reviews.css */
-
 .reviews-container {
-    padding: 20px;
+  padding: 30px;
+  margin: 0 300px; /* 양옆에 마진 추가 */
+}
+
+.reviews-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.review-item {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: calc(33.333% - 20px); /* 반응형 컬럼 개수 */
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.review-item:hover {
+  transform: scale(1.05);
+}
+
+.review-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.review-item h3 {
+  font-size: 1.2em;
+  margin: 0.5em 0;
+  padding: 0 10px;
+}
+
+.review-item p {
+  font-size: 0.9em;
+  padding: 0 10px 10px;
+}
+
+@media (max-width: 1024px) {
+  .review-item {
+    width: calc(50% - 20px);
   }
-  
-  .reviews-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .review-item {
+    width: calc(100% - 20px);
   }
-  
-  .review-card {
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 4px;
-    text-align: center;
-  }
-  
-  .review-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-  }
-  
-  .review-card h3 {
-    margin-top: 10px;
-  }
-  
-  .review-card p {
-    margin-top: 10px;
-    color: #666;
-  }
-  
+}

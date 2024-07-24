@@ -1,25 +1,56 @@
-// src/pages/ReviewDetails.js
-
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import axios from 'axios';
+import './ReviewDetails.css';
 
 const ReviewDetails = () => {
-  const { reviewId } = useParams();
+  const { id } = useParams();
+  const [review, setReview] = useState(null);
 
-  // 예시 데이터를 사용하거나 실제 데이터를 불러올 수 있습니다.
-  const reviews = [
-    { id: 1, title: '비 오는 날이 주는 즐거움', content: '여름 장마가 시작되고...' },
-    { id: 2, title: '코로나 블루가 지속되는 가운데...', content: '답답한 실내로...' },
-    { id: 3, title: '우리에게도 더 좋은 날이 올 것이다', content: '여긴 칼라스 밸즈...' },
-    // 추가 리뷰 데이터
-  ];
+  useEffect(() => {
+    if (id) {
+      axios.get(`http://localhost:3001/api/reviews/${id}`)
+        .then(response => {
+          console.log('Fetched review details from server:', response.data);
+          const reviewData = response.data;
+          setReview({
+            title: reviewData.title,
+            contents: reviewData.contents || [] // contents가 undefined일 경우 빈 배열로 설정
+          });
+        })
+        .catch(error => console.error('Error fetching review details:', error));
+    }
+  }, [id]);
 
-  const review = reviews.find(r => r.id === parseInt(reviewId));
+  if (!review) {
+    return <div>Loading...</div>;
+  }
 
   return (
-    <div>
-      <h2>{review.title}</h2>
-      <p>{review.content}</p>
+    <div className="page-container">
+      <div className="review-header">
+        <h2 className="review-title">{review.title}</h2>
+      </div>
+      {review.contents.length > 0 ? (
+        review.contents.map((item, index) => (
+          item.type === 'text' ? (
+            <p key={index} className="review-content">{item.content.split('\n').map((line, index) => (
+              <React.Fragment key={index}>
+                {line}
+                <br />
+              </React.Fragment>
+            ))}</p>
+          ) : item.type === 'image' ? (
+            <img key={index} className="review-image" src={`data:image/jpeg;base64,${item.content}`} alt="Review content" />
+          ) : item.type === 'link' ? (
+            <p key={index} className="review-content">
+              기사보기 : <a className="btn btn-primary" href={item.content} target="_blank" rel="noopener noreferrer">URL 버튼</a>
+            </p>
+          ) : null
+        ))
+      ) : (
+        <p>No contents available</p>
+      )}
     </div>
   );
 };

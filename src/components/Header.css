@@ -13,13 +13,13 @@
   display: flex;
   justify-content: right;
   align-items: center;
-  padding: 2rem 0;
+  padding: 1.5rem 0; /* 2/3 수준으로 줄이기 */
 }
 
 .nav-list {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem; /* 2/3 수준으로 줄이기 */
   margin: 0;
   padding: 0;
 }
@@ -28,7 +28,7 @@
   text-decoration: none;
   color: #333;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 0.8rem; /* 2/3 수준으로 줄이기 */
   transition: color 0.3s;
 }
 
@@ -44,19 +44,18 @@ nav ul {
 }
 
 nav ul li {
-  margin: 0 10px;
+  margin: 0 7px; /* 2/3 수준으로 줄이기 */
 }
 
 nav ul li a {
   text-decoration: none;
   color: gray;
-  font-size: 1.2rem;
+  font-size: 0.8rem; /* 2/3 수준으로 줄이기 */
   font-weight: 600;
 }
 
 nav ul li a:hover {
   color: gray;
- 
 }
 
 /* 방문한 링크 스타일 설정 해제 */

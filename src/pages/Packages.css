@@ -1,46 +1,68 @@
 /* src/pages/Packages.css */
 
+.page-container {
+    margin: 0 300px;
+    padding: 20px;
+    min-width: 30vw; /* 최소 페이지 너비를 30%로 설정 */
+    max-width: 80vw; /* 최대 페이지 너비를 80%로 설정 */
+}
+
 .packages {
     padding: 2rem;
     text-align: center;
-  }
-  
-  .package-list {
+}
+
+.package-list {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
-    gap: 2rem;
-  }
-  
-  .package-item {
+    gap: 1rem;
+}
+
+.package-item {
     width: 300px;
-    border: 1px solid #ddd;
-    padding: 1rem;
+    padding: 0.5rem;
     text-align: left;
-  }
-  
-  .package-item img {
+    border-bottom: 1px solid #ddd;
+}
+
+.package-item img {
     width: 100%;
     height: auto;
-  }
-  
-  .package-item h3 {
-    font-size: 1.2rem;
+}
+
+.package-item h3 {
+    font-size: 1.5rem;
     margin-top: 1rem;
-  }
-  
-  .package-item p {
+    text-align: left;
+}
+
+.package-item p {
     font-size: 1rem;
     margin: 0.5rem 0;
-  }
-  
-  .package-item ul {
-    list-style-type: circle;
-    padding-left: 1.5rem;
-  }
-  
-  .package-item ul li {
-    font-size: 0.9rem;
+    text-align: left;
+}
+
+.package-item ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.package-item ul li {
+    font-size: 0.5rem;
     margin: 0.2rem 0;
-  }
-  
+    text-align: center;
+}
+
+
+.package-item ul {
+    list-style-type: none;
+    padding-left: 0;
+    text-align: left; /* 추가: 목록 아이템을 왼쪽 정렬 */
+}
+
+.package-item ul li {
+    font-size: 1.2rem;
+    margin: 0.2rem 0;
+    text-align: left; /* 추가: 목록 아이템을 왼쪽 정렬 */
+}
