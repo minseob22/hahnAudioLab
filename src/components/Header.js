@@ -1,37 +1,39 @@
-// src/components/Header.js
-
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
-  const location = useLocation();
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  const handleLinkClick = (e, target) => {
-    if (location.pathname === '/') {
-      e.preventDefault();
-      const element = document.querySelector(target);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
   };
 
   return (
     <header className="header">
-      <nav className="nav">
+      <div className="hamburger" onClick={toggleMenu}>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+      </div>
+      <nav className={`nav ${menuOpen ? 'open' : ''}`}>
         <ul className="nav-list">
-          <li className="nav-item"><Link to="/" onClick={(e) => handleLinkClick(e, '#home')}>Home</Link></li>
-          <li className="nav-item"><Link to="/" onClick={(e) => handleLinkClick(e, '#philosophy')}>Philosophy</Link></li>
-          <li className="nav-item"><Link to="/" onClick={(e) => handleLinkClick(e, '#concept')}>Concept</Link></li>
-          <li className="nav-item"><Link to="/" onClick={(e) => handleLinkClick(e, '#products')}>Products</Link></li>
-          <li className="nav-item"><Link to="/" onClick={(e) => handleLinkClick(e, '#packages')}>Packages</Link></li>
-          <li className="nav-item"><Link to="/" onClick={(e) => handleLinkClick(e, '#reviews')}>Reviews</Link></li>
-          <li className="nav-item"><Link to="/" onClick={(e) => handleLinkClick(e, '#policy')}>Policy</Link></li>
+          <li className="nav-item"><Link to="/#home" onClick={closeMenu}>Home</Link></li>
+          <li className="nav-item"><Link to="/#philosophy" onClick={closeMenu}>Philosophy</Link></li>
+          <li className="nav-item"><Link to="/#concept" onClick={closeMenu}>Concept</Link></li>
+          <li className="nav-item"><Link to="/#products" onClick={closeMenu}>Products</Link></li>
+          <li className="nav-item"><Link to="/#packages" onClick={closeMenu}>Packages</Link></li>
+          <li className="nav-item"><Link to="/#reviews" onClick={closeMenu}>Reviews</Link></li>
+          <li className="nav-item"><Link to="/#policy" onClick={closeMenu}>Policy</Link></li>
           <li><a href="https://blog.naver.com/gksehdgns06" target="_blank" rel="noopener noreferrer">Blog</a></li>
-          <li className="nav-item"><Link to="/" onClick={(e) => handleLinkClick(e, '#contact')}>Contact</Link></li>
+          <li className="nav-item"><Link to="/#contact" onClick={closeMenu}>Contact</Link></li>
         </ul>
       </nav>
+      {menuOpen && <div className="overlay" onClick={closeMenu}></div>}
     </header>
   );
 };
