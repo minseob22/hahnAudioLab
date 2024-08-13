@@ -26,7 +26,7 @@ const concpetItems = [
 
 const Concept = () => {
     return(
-        <div className="concept-container">
+    <div className="concept-container">
       <div className="concept-title">
         <h2>Concept</h2>
       </div>

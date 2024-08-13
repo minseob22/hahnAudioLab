@@ -1,40 +1,56 @@
 .contacts-container {
-    padding: 40px 20px;
-    margin: 0 300px; /* 양옆에 마진 추가 */
-    text-align: center;
+  padding: 40px 20px;
+  margin: 0 auto; /* 가운데 정렬을 위해 양옆 마진을 auto로 설정 */
+  max-width: 1200px; /* 최대 너비 설정 */
+  text-align: center;
+}
+
+.contacts-title {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.contacts-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  flex: 1;
+  margin: 20px;
+  max-width: 400px;
+}
+
+.contact-item img {
+  width: 80px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.contact-item a, .contact-item p {
+  font-size: 0.9em;
+  color: #555;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+/* 모바일 스타일 */
+@media (max-width: 767px) {
+  .contacts-container {
+      padding: 20px;
+      margin: 0 10px; /* 모바일에서는 양옆 마진을 줄임 */
   }
-  
-  .contacts-title {
-    font-size: 2.5em;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .contacts-content {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
   .contact-item {
-    flex: 1;
-    margin: 20px;
-    max-width: 400px;
+      margin: 10px 0; /* 모바일에서는 아이템 간의 간격을 줄임 */
+      max-width: 100%; /* 모바일에서 전체 너비 사용 */
   }
-  
   .contact-item img {
-    width: 80px;
-    height: 40px;
-    margin-bottom: 10px;
+      width: 60px;
+      height: 30px; /* 아이콘 크기를 줄여서 공간 확보 */
   }
-  
-  .contact-item a, .contact-item p {
-    font-size: 0.9em;
-    color: #555;
-    text-decoration: none;
-  }
-  
-  .contact-item a:hover {
-    text-decoration: underline;
-  }
-  
+}

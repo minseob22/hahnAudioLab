@@ -1,13 +1,13 @@
-/* src/pages/Philosophy.css */
+/* Philosophy.css */
 
 .philosophy-container {
   padding: 30px 15px;
-  margin: 0 300px;
   max-width: 1200px;
+  margin: 0 auto; /* 컨테이너를 가운데 정렬 */
 }
 
 .philosophy-title {
-  text-align: center;
+  text-align: center; /* 제목을 가운데 정렬 */
   margin-bottom: 20px;
   font-size: 2rem;
 }
@@ -16,6 +16,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+  justify-content: center; /* 콘텐츠를 수평으로 가운데 정렬 */
 }
 
 .image-box {
