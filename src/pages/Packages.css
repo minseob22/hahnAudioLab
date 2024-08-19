@@ -1,68 +1,97 @@
-/* src/pages/Packages.css */
-
+/* 페이지 컨테이너 설정 */
 .page-container {
-    margin: 0 300px;
-    padding: 20px;
-    min-width: 30vw; /* 최소 페이지 너비를 30%로 설정 */
-    max-width: 80vw; /* 최대 페이지 너비를 80%로 설정 */
-}
-
-.packages {
-    padding: 2rem;
-    text-align: center;
-}
-
-.package-list {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.package-item {
-    width: 300px;
-    padding: 0.5rem;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
-.package-item img {
+    padding: 40px;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  /* 패키지 리스트 그리드 설정 */
+  .package-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3열로 설정 */
+    grid-gap: 40px; /* 각 항목 간의 간격 */
+    justify-items: center; /* 아이템을 중앙 정렬 */
+  }
+  
+  /* 패키지 아이템 스타일 */
+  .package-item {
+    background-color: transparent; /* 카드 배경 제거 */
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0px;
+    max-width: 100%;
+    border-bottom: 1px solid #ccc; /* 얇은 실선 추가 */
+    padding-bottom: 20px; /* 선과 텍스트 사이 간격 추가 */
+  }
+  
+  .package-item img {
     width: 100%;
     height: auto;
-}
-
-.package-item h3 {
-    font-size: 1.5rem;
-    margin-top: 1rem;
-    text-align: left;
-}
-
-.package-item p {
-    font-size: 1rem;
-    margin: 0.5rem 0;
-    text-align: left;
-}
-
-.package-item ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.package-item ul li {
-    font-size: 0.5rem;
-    margin: 0.2rem 0;
-    text-align: center;
-}
-
-
-.package-item ul {
-    list-style-type: none;
-    padding-left: 0;
-    text-align: left; /* 추가: 목록 아이템을 왼쪽 정렬 */
-}
-
-.package-item ul li {
-    font-size: 1.2rem;
-    margin: 0.2rem 0;
-    text-align: left; /* 추가: 목록 아이템을 왼쪽 정렬 */
-}
+    margin-bottom: 20px;
+  }
+  
+  .package-item h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: left; /* 제목을 왼쪽 정렬 */
+  }
+  
+  .package-item p {
+    font-size: 1.2em;
+    font-style: italic;
+    margin-bottom: 10px;
+    text-align: left; /* 부제목을 왼쪽 정렬 */
+  }
+  
+  .package-item ul {
+    list-style-type: none; /* 리스트 스타일 제거 */
+    padding: 0;
+    text-align: left; /* 리스트 항목을 왼쪽 정렬 */
+  }
+  
+  .package-item li {
+    font-size: 1em;
+    margin-bottom: 5px;
+    line-height: 1.5;
+  }
+  
+  /* 미디어 쿼리: 태블릿 화면 스타일 */
+  @media (max-width: 1024px) {
+    .package-list {
+      grid-template-columns: repeat(3, 1fr); /* 여전히 3열 유지 */
+      grid-gap: 20px;
+    }
+  
+    .package-item img {
+      width: 90%; /* 태블릿 화면에서는 이미지 크기 축소 */
+    }
+  
+    .package-item h3 {
+      font-size: 1.5em;
+    }
+  
+    .package-item p, .package-item li {
+      font-size: 1em;
+    }
+  }
+  
+  /* 미디어 쿼리: 모바일 화면 스타일 */
+  @media (max-width: 767px) {
+    .package-list {
+      grid-template-columns: 1fr; /* 한 열로 설정 */
+    }
+  
+    .package-item img {
+      width: 100%;
+    }
+  
+    .package-item h3 {
+      font-size: 1.3em;
+    }
+  
+    .package-item p, .package-item li {
+      font-size: 0.9em;
+    }
+  }
+  

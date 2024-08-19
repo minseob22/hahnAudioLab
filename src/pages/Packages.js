@@ -9,7 +9,7 @@ const Packages = () => {
       <h2>Packages</h2>
       <div className="package-list">
         <div className="package-item">
-          <img src="path_to_image_A" alt="Package Type A" />
+          <img src="/img/package_a.png" alt="Package Type A" />
           <h3>Package Type A</h3>
           <p>– living room with Focal Speaker</p>
           <ul>
@@ -20,7 +20,7 @@ const Packages = () => {
           </ul>
         </div>
         <div className="package-item">
-          <img src="path_to_image_B" alt="Package Type B" />
+          <img src="/img/package_b.jpg" alt="Package Type B" />
           <h3>Package Type B</h3>
           <p>– personal</p>
           <ul>
@@ -31,7 +31,7 @@ const Packages = () => {
           </ul>
         </div>
         <div className="package-item">
-          <img src="path_to_image_C" alt="Package Type C" />
+          <img src="/img/package_c.png" alt="Package Type C" />
           <h3>Package Type C</h3>
           <p>– bluetooth only</p>
           <ul>
