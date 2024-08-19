@@ -1,7 +1,7 @@
 .concept-container {
   padding: 40px;
-  margin: 0 auto; /* 가운데 정렬을 위해 양옆 마진을 auto로 설정 */
-  max-width: 1200px; /* 최대 너비를 설정하여 큰 화면에서 너무 넓어지지 않도록 설정 */
+  margin: 0 auto;
+  max-width: 1200px;
   text-align: center;
 }
 
@@ -10,10 +10,11 @@
   margin-bottom: 20px;
 }
 
+/* Desktop View */
 .concept-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* 그리드 아이템이 화면 크기에 따라 적응하도록 설정 */
-  grid-gap: 20px; /* 아이템 간의 간격을 좀 더 넓게 조정 */
+  grid-template-columns: repeat(2, 1fr); /* Two items per row */
+  grid-gap: 40px; /* Space between items */
 }
 
 .concept-item {
@@ -31,7 +32,7 @@
 .concept-image img {
   width: 100%;
   height: auto;
-  border-radius: 50%; /* 이미지를 둥글게 만듦 */
+  border-radius: 50%;
 }
 
 .concept-text {
@@ -40,13 +41,23 @@
   font-size: 1em;
 }
 
-/* 모바일 스타일 */
-@media (max-width: 767px) {
-  .concept-container {
-      padding: 20px; /* 모바일에서는 패딩을 줄여서 화면 공간을 더 활용 */
-      margin: 0 10px; /* 양옆 마진을 줄여서 화면에 더 꽉 차게 보이도록 */
+/* Mobile and Tablet View */
+@media (max-width: 1023px) {
+  .concept-grid {
+    grid-template-columns: 1fr; /* One item per row */
+    grid-gap: 20px; /* Less space between items for smaller screens */
   }
+
+  .concept-container {
+    padding: 20px;
+    margin: 0 10px;
+  }
+
   .concept-text {
-      padding: 10px; /* 텍스트 패딩을 줄여서 더 많은 컨텐츠를 화면에 표시 */
+    padding: 10px;
+  }
+
+  .concept-image {
+    max-width: 250px; /* Slightly larger image on mobile/tablet */
   }
 }
