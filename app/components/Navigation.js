@@ -25,28 +25,28 @@ export default function Navigation() {
       <nav className={`${styles.nav} ${menuOpen ? styles.open : ''}`}>
         <ul className={styles.navList}>
           <li className={styles.navItem}>
-            <Link href="#philosophy" onClick={closeMenu}>Philosophy</Link>
+            <Link href="/#philosophy" onClick={closeMenu}>Philosophy</Link>
           </li>
           <li className={styles.navItem}>
-            <Link href="#concept" onClick={closeMenu}>Concept</Link>
+            <Link href="/#concept" onClick={closeMenu}>Concept</Link>
           </li>
           <li className={styles.navItem}>
-            <Link href="#products" onClick={closeMenu}>Products</Link>
+            <Link href="/#products" onClick={closeMenu}>Products</Link>
           </li>
           <li className={styles.navItem}>
-            <Link href="#packages" onClick={closeMenu}>Packages</Link>
+            <Link href="/#packages" onClick={closeMenu}>Packages</Link>
           </li>
           <li className={styles.navItem}>
-            <Link href="#reviews" onClick={closeMenu}>Reviews</Link>
+            <Link href="/#reviews" onClick={closeMenu}>Reviews</Link>
           </li>
           <li className={styles.navItem}>
-            <Link href="#policy" onClick={closeMenu}>Policy</Link>
+            <Link href="/#policy" onClick={closeMenu}>Policy</Link>
           </li>
           <li className={styles.navItem}>
             <a href="https://blog.naver.com/gksehdgns06" target="_blank" rel="noopener noreferrer">Blog</a>
           </li>
           <li className={styles.navItem}>
-            <Link href="#contacts" onClick={closeMenu}>Contacts</Link>
+            <Link href="/#contacts" onClick={closeMenu}>Contacts</Link>
           </li>
         </ul>
       </nav>
