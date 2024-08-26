@@ -1,0 +1,63 @@
+.conceptContainer {
+    padding: 40px;
+    margin: 0 auto;
+    max-width: 1200px;
+    text-align: center;
+  }
+  
+  .conceptTitle h2 {
+    font-size: 2.5em;
+    margin-bottom: 100px;
+  }
+  
+  /* Desktop View */
+  .conceptGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-gap: 40px; 
+  }
+  
+  .conceptItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .conceptImage {
+    width: 100%;
+    max-width: 150px;
+    padding: 10px;
+  }
+  
+  .image {
+    border-radius: 50%;
+  }
+  
+  .conceptText {
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    max-width: 38 0px;
+  }
+  
+  /* Mobile and Tablet View */
+  @media (max-width: 1023px) {
+    .conceptGrid {
+      grid-template-columns: 1fr; /* One item per row */
+      grid-gap: 20px; /* Less space between items for smaller screens */
+    }
+  
+    .conceptContainer {
+      padding: 20px;
+      margin: 0 10px;
+    }
+  
+    .conceptText {
+      padding: 10px;
+    }
+  
+    .conceptImage {
+      max-width: 250px; /* Slightly larger image on mobile/tablet */
+    }
+  }
+  
