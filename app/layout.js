@@ -1,5 +1,7 @@
 import Navigation from './components/Navigation';
-import Footer from './components/Footer'; // Footer 컴포넌트 임포트
+import Footer from './components/Footer';
+import './font.css'; 
+import './scroll.css';
 
 export const metadata = {
   title: 'Next.js',
@@ -9,6 +11,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Noto+Serif:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body>
         <Navigation />
         <main>

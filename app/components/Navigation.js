@@ -1,4 +1,3 @@
-
 "use client"
 
 import { useState } from 'react';
@@ -18,10 +17,15 @@ export default function Navigation() {
 
   return (
     <header className={styles.header}>
-      <div className={styles.hamburger} onClick={toggleMenu}>
-        <div className={styles.bar}></div>
-        <div className={styles.bar}></div>
-        <div className={styles.bar}></div>
+      <div className={styles.navBar}>
+        <div className={styles.brand}>
+          <h1 className={styles.mobileBrand}>Hahn Audio Lab</h1> 
+        </div>
+        <div className={styles.hamburger} onClick={toggleMenu}>
+          <div className={styles.bar}></div>
+          <div className={styles.bar}></div>
+          <div className={styles.bar}></div>
+        </div>
       </div>
       <nav className={`${styles.nav} ${menuOpen ? styles.open : ''}`}>
         <ul className={styles.navList}>
