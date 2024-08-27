@@ -1,11 +1,16 @@
 "use client"
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import styles from './Navigation.module.css'; // 스타일 파일
 
 export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isClient, setIsClient] = useState(false); // 클라이언트 여부 확인
+
+  useEffect(() => {
+    setIsClient(true); // 컴포넌트가 마운트된 후 클라이언트에서 동작하도록 설정
+  }, []);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -13,6 +18,20 @@ export default function Navigation() {
 
   const closeMenu = () => {
     setMenuOpen(false);
+  };
+
+  const handleScroll = (e, targetId) => {
+    e.preventDefault();
+    const targetElement = document.getElementById(targetId);
+    if (targetElement && isClient) {
+      window.scrollTo({
+        top: targetElement.offsetTop,
+        behavior: 'smooth',
+      });
+      setMenuOpen(false);
+      // URL에 해시를 추가합니다.
+      window.history.pushState(null, '', `#${targetId}`);
+    }
   };
 
   return (
@@ -30,28 +49,28 @@ export default function Navigation() {
       <nav className={`${styles.nav} ${menuOpen ? styles.open : ''}`}>
         <ul className={styles.navList}>
           <li className={styles.navItem}>
-            <Link href="/#philosophy" onClick={closeMenu}>Philosophy</Link>
+            <a href="/#philosophy" onClick={(e) => handleScroll(e, 'philosophy')}>Philosophy</a>
           </li>
           <li className={styles.navItem}>
-            <Link href="/#concept" onClick={closeMenu}>Concept</Link>
+            <a href="/#concept" onClick={(e) => handleScroll(e, 'concept')}>Concept</a>
           </li>
           <li className={styles.navItem}>
-            <Link href="/#products" onClick={closeMenu}>Products</Link>
+            <a href="/#products" onClick={(e) => handleScroll(e, 'products')}>Products</a>
           </li>
           <li className={styles.navItem}>
-            <Link href="/#packages" onClick={closeMenu}>Packages</Link>
+            <a href="/#packages" onClick={(e) => handleScroll(e, 'packages')}>Packages</a>
           </li>
           <li className={styles.navItem}>
-            <Link href="/#reviews" onClick={closeMenu}>Reviews</Link>
+            <a href="/#reviews" onClick={(e) => handleScroll(e, 'reviews')}>Reviews</a>
           </li>
           <li className={styles.navItem}>
-            <Link href="/#policy" onClick={closeMenu}>Policy</Link>
+            <a href="/#policy" onClick={(e) => handleScroll(e, 'policy')}>Policy</a>
           </li>
           <li className={styles.navItem}>
             <a href="https://blog.naver.com/gksehdgns06" target="_blank" rel="noopener noreferrer">Blog</a>
           </li>
           <li className={styles.navItem}>
-            <Link href="/#contacts" onClick={closeMenu}>Contacts</Link>
+            <a href="/#contacts" onClick={(e) => handleScroll(e, 'contacts')}>Contacts</a>
           </li>
         </ul>
       </nav>
