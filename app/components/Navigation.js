@@ -48,6 +48,11 @@ export default function Navigation() {
       </div>
       <nav className={`${styles.nav} ${menuOpen ? styles.open : ''}`}>
         <ul className={styles.navList}>
+
+          <li className={`${styles.navItem} ${styles.mobileOnly}`}>
+            <a href="/#banner" onClick={(e) => handleScroll(e, 'banner')}>Home</a>
+          </li>
+
           <li className={styles.navItem}>
             <a href="/#philosophy" onClick={(e) => handleScroll(e, 'philosophy')}>Philosophy</a>
           </li>

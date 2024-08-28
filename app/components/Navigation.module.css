@@ -67,7 +67,11 @@
   color: gray;
 }
 
-@media (max-width: 768px) {
+.navItem.mobileOnly {
+  display: none; /* 기본적으로 숨김 */
+}
+
+@media (max-width: 1023px) {
 
   .header {
     height: 2.65rem; 
@@ -141,6 +145,10 @@
   .navItem:not(:last-child)::after {
     display: none; 
   }
+
+  .navItem.mobileOnly {
+    display: block; /* 모바일에서는 보이도록 설정 */
+  }
   
 
   .mobileBrand {
@@ -172,7 +180,7 @@
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1024px) {
   .nav .close-btn {
     display: none;
   }
