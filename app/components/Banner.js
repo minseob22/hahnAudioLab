@@ -1,5 +1,3 @@
-// app/components/Banner.js (서버 컴포넌트)
-
 import Image from 'next/image';
 import styles from './Banner.module.css';
 
@@ -10,6 +8,7 @@ export default async function Banner() {
   };
 
   return (
+    <div section id ="banner">
     <div className={styles.visualSection}>
       <div className={styles.banner}>
         <Image 
@@ -22,6 +21,7 @@ export default async function Banner() {
           <h1>{data.title}</h1>
         </div>
       </div>
+    </div>
     </div>
   );
 }
