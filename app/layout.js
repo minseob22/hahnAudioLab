@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link
-          href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Noto+Serif:wght@400;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Droid+Serif:wght@400;700&family=Nanum+Gothic:wght@400;700&family=Malgun+Gothic:wght@400;700&family=Noto+Sans+KR:wght@400;700&family=Noto+Serif:wght@400;700&family=Apple+SD+Gothic+Neo:wght@400;700&display=swap"
           rel="stylesheet"
         />
       </head>

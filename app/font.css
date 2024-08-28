@@ -1,9 +1,34 @@
-
+/* font.css */
 
 body {
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 
+    "Droid Serif", 
+    NanumBarunGothic,  
+    "Malgun Gothic", 
+    "Noto Sans", 
+    "Apple SD Gothic Neo", 
+    sans-serif;
+    color: #3D3D3D; /* 폰트 색상 변경 */
 }
 
-.english-text {
-  font-family: 'Noto Serif', serif;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 
+    "Droid Serif", 
+    NanumBarunGothic,  
+    "Malgun Gothic", 
+    "Noto Serif", 
+    "Apple SD Gothic Neo", 
+    sans-serif;
+    color: #3D3D3D; /* 폰트 색상 변경 */
+}
+
+p, a, div, span, button, input, textarea {
+  font-family: 
+    "Droid Serif", 
+    NanumBarunGothic,  
+    "Malgun Gothic", 
+    "Noto Sans", 
+    "Apple SD Gothic Neo", 
+    sans-serif;
+    color: #3D3D3D; /* 폰트 색상 변경 */
 }
