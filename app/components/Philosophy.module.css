@@ -1,15 +1,18 @@
 .philosophyContainer {
-    padding: 30px 15px;
-    max-width: 1200px;
+    padding: 30px 0px;
+    max-width: 1250px;
     margin: 0 auto; /* 컨테이너를 가운데 정렬 */
   }
   
   .philosophyTitle {
     text-align: center; /* 제목을 가운데 정렬 */
     margin-bottom: 20px;
-    font-size: 2rem;
-    margin-bottom :100px;
+    font-size: 30px;
+    margin-top: 110px;
+    margin-bottom :110px;
+    font-weight: 300;
   }
+  
   
   .philosophyContent {
     display: flex;
@@ -37,7 +40,7 @@
   }
   
   .textContainer div {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   
   /* 태블릿 및 모바일 스타일 */
@@ -46,14 +49,26 @@
       flex-direction: column;
       align-items: center;
     }
+
+    .philosophyTitle {
+      text-align: center; /* 제목을 가운데 정렬 */
+      
+      font-size: 20px;
+      margin-top: 50px;
+      margin-bottom :60px;
+      font-weight: 300;
+    }
   
     .imageBox {
-      margin-right: 0;
-      margin-bottom: 20px;
+      width: 100%; /* 이미지를 화면 폭에 맞춤 */
     }
   
     .textBox {
-      text-align: center;
+      width: 100%;
+      padding: 0;
+      margin-top: 10px;
+      text-align: left;
+      font-size: 15px;
     }
   }
   
@@ -63,6 +78,7 @@
       flex-direction: column; /* 열 방향으로 정렬 */
       align-items: center; /* 중앙 정렬 */
     }
+
   
     .imageBox {
       width: 100%; /* 이미지를 가로 폭 전체로 설정 */
@@ -73,25 +89,9 @@
     .textBox {
       width: 100%; /* 텍스트 박스를 가로 폭 전체로 설정 */
       text-align: left; /* 텍스트 중앙 정렬 */
-      font-size: 1.2rem;
+      font-size: 20px;
     }
   }
   
-  /* 모바일 및 태블릿 스타일 */
-  @media (max-width: 1023px) {
-    .philosophyContainer {
-      max-width: 100%;
-      padding: 0;
-    }
-  
-    .imageBox {
-      width: 100%; /* 이미지를 화면 폭에 맞춤 */
-    }
-  
-    .textBox {
-      width: 100%;
-      padding: 0;
-      text-align: left;
-    }
-  }
+
   

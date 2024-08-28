@@ -24,19 +24,17 @@ export default function Concept() {
   return (
     <div section id="concept">
     <div className={styles.conceptContainer}>
-      <div className={styles.conceptTitle}>
-        <h2>Concept</h2>
-      </div>
+      <div className={styles.conceptTitle}>Concept</div>
       <div className={styles.conceptGrid}>
         {conceptItems.map((item, index) => (
           <div key={index} className={styles.conceptItem}>
             <div className={styles.conceptImage}>
-              {/* Next.js의 Image 컴포넌트를 사용하여 이미지 최적화 */}
+              
               <Image
                 src={item.imgSrc}
                 alt={`Concept ${index + 1}`}
-                width={150}
-                height={150}
+                width={200}
+                height={200}
                 className={styles.image}
               />
             </div>

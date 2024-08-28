@@ -1,32 +1,36 @@
 .conceptContainer {
     padding: 40px;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1250px;
+    margin-bottom: 30px;
     text-align: center;
   }
   
-  .conceptTitle h2 {
-    font-size: 2.5em;
-    margin-bottom: 100px;
+  .conceptTitle {
+    font-size: 30px;
+    margin-top: 70px;
+    margin-bottom: 85px;
   }
   
   /* Desktop View */
   .conceptGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
-    grid-gap: 40px; 
+    grid-gap: 0px; 
   }
   
   .conceptItem {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
   }
   
   .conceptImage {
     width: 100%;
-    max-width: 150px;
-    padding: 10px;
+    max-width: 200px;
+    
+    padding: 0px 15px;
   }
   
   .image {
@@ -36,8 +40,9 @@
   .conceptText {
     padding: 20px;
     text-align: center;
-    font-size: 1.2em;
-    max-width: 38 0px;
+    font-size: 20px;
+    max-width: 390px;
+    padding: 0px 15px;
   }
   
   /* Mobile and Tablet View */
@@ -45,6 +50,11 @@
     .conceptGrid {
       grid-template-columns: 1fr; /* One item per row */
       grid-gap: 20px; /* Less space between items for smaller screens */
+    }
+
+    .conceptTitle {
+      font-size: 20px;
+      margin-bottom: 70px;
     }
   
     .conceptContainer {

@@ -42,7 +42,7 @@ const packages = [
 export default function Packages() {
   return (
     <div section id="packages">
-    <div className={styles.pageContainer}>
+    <div className={styles.packageContainer}>
       <h2 className={styles.packagesTitle}>Packages</h2>
       <div className={styles.packageList}>
         {packages.map((pkg, index) => (

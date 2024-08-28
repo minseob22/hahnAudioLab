@@ -1,13 +1,17 @@
-.pageContainer {
-    padding: 40px;
+.packageContainer {
+    padding: 130px 15px;
+    margin-top: 140px;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1250px;
   }
 
   .packagesTitle {
+    padding : 0px 15px;
+   
     text-align: center;
     margin-bottom: 100px; 
-    font-size: 2rem; 
+    font-size: 30px; 
+    font-weight: 300;
 }
   
   .packageList {
@@ -20,22 +24,27 @@
   .packageItem {
     background-color: transparent;
     padding: 0;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;  
     padding-bottom: 20px;
+  }
+
+  .packageItem img {
+    border-bottom: 1px solid #ccc; /* 이미지 바로 아래에 얇은 선 추가 */
+    padding-bottom: 30px; /* 이미지와 선 사이의 여백 */
   }
   
   .packageItem h3 {
     font-size: 1.8em;
     margin-bottom: 10px;
-    font-weight: bold;
+    font-weight: 400;
     text-align: left;
   }
   
   .packageItem p {
-    font-size: 1.2em;
-    font-style: italic;
+    font-size: 18px;
     margin-bottom: 10px;
     text-align: left;
+    
   }
   
   .packageItem ul {

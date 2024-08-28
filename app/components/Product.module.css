@@ -1,84 +1,91 @@
-/* Product.module.css */
 .productContainer {
-    padding: 40px;
-    text-align: center;
-    margin: 0 auto;
-    max-width: 1200px;
-  }
+  padding: 30px 10px;
+  text-align: center;
   
-  .productTitle h2 {
-    font-size: 2.5em;
-    margin-bottom: 100px;
-  }
+  margin: 0 auto;
+  max-width: 1250px;
+}
+
+.productTitle {
+  font-size: 30px;
+  margin-top: 100px;/*임시 방편으로 컨샙과 거리를 벌림*/
+  margin-bottom: 100px;
+
   
+}
+
+.productGrid {
+  display: grid;  
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 40px;
+}
+
+.productItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+  padding: 0;
+  box-shadow: none;
+  border-radius: 0px;
+}
+
+.imagebox {
+    width: 100%;
+    height: auto;
+  margin-bottom: 10px;
+  overflow: hidden;
+  border-bottom: 1px solid #ccc; /* 이미지 아래 얇은 선 추가 */
+}
+
+.imagebox img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.imagebox img:hover {
+  transform: scale(1.05);
+}
+
+.productText {
+  width: 100%;
+  text-align: left;
+  font-size: 18px;
+  
+  padding-bottom: 10px; /* 선이 텍스트와 겹치지 않도록 패딩 추가 */
+  border-bottom: 1px solid #ccc; /* 텍스트 아래 얇은 선 추가 */
+}
+
+.productText h3 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+.productText p {
+  margin: 0; /* 모든 p 태그의 margin을 0으로 설정 */
+}
+
+
+@media (max-width: 1023px) {
   .productGrid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 40px;
+    grid-template-columns: 1fr;
   }
-  
+
   .productItem {
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    background-color: transparent;
-    padding: 0;
-    box-shadow: none;
-    border-radius: 0px;
   }
-  
-  .imagebox {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-    overflow: hidden;
-  }
-  
-  .imagebox img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
-  }
-  
-  .imagebox img:hover {
-    transform: scale(1.05);
-  }
-  
+
+  .imagebox,
   .productText {
     width: 100%;
+  }
+
+  .imagebox {
+    margin-bottom: 20px;
+  }
+
+  .productText {
     text-align: center;
   }
-  
-  .productText h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-  }
-  
-  .productText p {
-    font-size: 1em;
-    color: #333;
-  }
-  
-  @media (max-width: 767px) {
-    .productGrid {
-      grid-template-columns: 1fr;
-    }
-  
-    .productItem {
-      flex-direction: column;
-    }
-  
-    .imagebox,
-    .productText {
-      width: 100%;
-    }
-  
-    .imagebox {
-      margin-bottom: 20px;
-    }
-  
-    .productText {
-      text-align: center;
-    }
-  }
-  
+}

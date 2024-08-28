@@ -1,8 +1,7 @@
 import Image from 'next/image';
 import styles from './Philosophy.module.css';
 
-export default async function Philosophy() {
-  // 서버에서 비동기 데이터를 가져올 수 있습니다.
+export default function Philosophy() {
   const texts = [
     "한동안 잊고 살아왔던 음악을 이제라도 듣고자 하는 분들을 위하여.....",
     "젊었을 때부터 갖고 싶었던 명품 오디오로 음악을 듣고 싶었지만 치열한 삶으로 아쉬움 속에서 보냈던 긴 세월, 지금이라도 제대로 된 오디오의 로망을 이루고 싶다.",
@@ -11,28 +10,27 @@ export default async function Philosophy() {
   ];
 
   return (
-    <div section id="philosophy">
-    <div className={styles.philosophyContainer}>
-      <h2 className={styles.philosophyTitle}>Philosophy</h2>
-      <div className={styles.philosophyContent}>
-        <div className={styles.imageBox}>
-          <Image
-            src="/img/27368be00be15.png"
-            alt="Philosophy"
-            layout="responsive"
-            width={500}
-            height={300}
-          />
-        </div>
-        <div className={styles.textBox}>
-          <div className={styles.textContainer}>
-            {texts.map((text, index) => (
-              <div key={index}>{text}</div>
-            ))}
+    <section id="philosophy">
+      <div className={styles.philosophyContainer}>
+        <h2 className={styles.philosophyTitle}>Philosophy</h2>
+        <div className={styles.philosophyContent}>
+          <div className={styles.imageBox}>
+            <Image
+              src="/img/27368be00be15.png"
+              alt="Philosophy"
+              width={500}
+              height={300}
+            />
+          </div>
+          <div className={styles.textBox}>
+            <div className={styles.textContainer}>
+              {texts.map((text, index) => (
+                <div key={index}>{text}</div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    </div>
+    </section>
   );
 }
