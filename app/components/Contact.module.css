@@ -1,7 +1,7 @@
 .contactsContainer {
     padding: 40px 20px;
     margin: 0 auto; /* 가운데 정렬을 위해 양옆 마진을 auto로 설정 */
-    max-width: 1200px; /* 최대 너비 설정 */
+    max-width: 1250px;
     text-align: center;
   }
   

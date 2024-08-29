@@ -60,7 +60,7 @@ export default function Products() {
                 </div>
               )}
               <div className={styles.productText}>
-                <h3>{product.title}</h3>
+                <h5>{product.title}</h5>
                 {product.description}
               </div>
             </div>

@@ -17,7 +17,7 @@
 .productGrid {
   display: grid;  
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 40px;
+  grid-gap: 30px;
 }
 
 .productItem {
@@ -58,7 +58,7 @@
   border-bottom: 1px solid #ccc; /* 텍스트 아래 얇은 선 추가 */
 }
 
-.productText h3 {
+.productText h5 {
   font-size: 24px;
   margin-bottom: 30px;
 }
@@ -68,8 +68,21 @@
 
 
 @media (max-width: 1023px) {
+
+  .packagelist{
+    margin : 0px;
+  }
+
   .productGrid {
     grid-template-columns: 1fr;
+  }
+
+  .productTitle {
+    font-size: 20px;
+    margin-top: 40px;/*임시 방편으로 컨샙과 거리를 벌림*/
+    margin-bottom: 100px;
+  
+    
   }
 
   .productItem {
@@ -86,6 +99,11 @@
   }
 
   .productText {
-    text-align: center;
-  }
+  width: 100%;
+  text-align: left;
+  font-size: 15px;
+  
+  padding-bottom: 30px; /* 선이 텍스트와 겹치지 않도록 패딩 추가 */
+  border-bottom: 1px solid #ccc; /* 텍스트 아래 얇은 선 추가 */
+}
 }
