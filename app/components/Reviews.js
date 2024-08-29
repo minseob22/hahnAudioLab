@@ -18,7 +18,7 @@ export default async function Reviews() {
     SELECT r.id as review_id, r.title, c.content, c.type 
     FROM reviews r
     LEFT JOIN contents c ON r.id = c.review_id
-    ORDER BY r.id, c.content_order
+    ORDER BY r.id DESC, c.content_order
   `);
 
   // 리뷰 데이터를 재구성합니다.
@@ -50,7 +50,7 @@ export default async function Reviews() {
   return (
     <div section id="reviews">
     <div className={styles.reviewsContainer}>
-      <h2>Reviews</h2>
+      <h2 className={styles.reviewsTitle}>Reviews</h2>     
       <div className={styles.reviewsGrid}>
         {reviewList.map((review) => (
           <Link href={`/reviews/${review.review_id}`} key={review.review_id} passHref>
@@ -63,8 +63,8 @@ export default async function Reviews() {
                 />
               )}
               <div className={styles.textContent}>
-                <h3>{review.title}</h3>
-                <p>{review.text.substring(0, 100)}...</p>
+              <h3 className={styles.noDecoration}>{review.title}</h3>
+              <p className={styles.noDecoration}>{review.text.substring(0, 80)}...</p>
               </div>
             </div>
           </Link>
