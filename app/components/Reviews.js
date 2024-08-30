@@ -53,7 +53,12 @@ export default async function Reviews() {
       <h2 className={styles.reviewsTitle}>Reviews</h2>     
       <div className={styles.reviewsGrid}>
         {reviewList.map((review) => (
-          <Link href={`/reviews/${review.review_id}`} key={review.review_id} passHref>
+          <Link 
+          href={`/reviews/${review.review_id}`} 
+          key={review.review_id} 
+          passHref
+          style={{ textDecoration: 'none' }}
+        >
             <div className={styles.reviewItem}>
               {review.images.length > 0 && (
                 <img 
@@ -64,7 +69,7 @@ export default async function Reviews() {
               )}
               <div className={styles.textContent}>
               <h3 className={styles.noDecoration}>{review.title}</h3>
-              <p className={styles.noDecoration}>{review.text.substring(0, 80)}...</p>
+              <p className={styles.noDecoration}>{review.text.substring(0, 100)}</p>
               </div>
             </div>
           </Link>
