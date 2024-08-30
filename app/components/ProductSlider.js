@@ -10,7 +10,7 @@ export default function ProductSlider({ images }) {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((currentImage) => (currentImage + 1) % images.length);
-    }, 3000); // 5 seconds
+    }, 3000); // 3 seconds
     return () => clearInterval(interval);
   }, [images]);
 
