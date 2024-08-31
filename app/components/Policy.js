@@ -2,7 +2,7 @@ import styles from './Policy.module.css';
 
 export default function Policy() {
   return (
-    <div section id="policy">
+    <section id="policy">
     <div className={styles.policyContainer}>
       <h2 className={styles.policyTitle}>Policy</h2>
       <div className={styles.policyContent}>
@@ -18,6 +18,6 @@ export default function Policy() {
         </ul>
       </div>
     </div>
-    </div>
+    </section>
   );
 }

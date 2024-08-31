@@ -8,7 +8,7 @@ export default async function Banner() {
   };
 
   return (
-    <div section id ="banner">
+    <section id ="banner">
     <div className={styles.visualSection}>
       <div className={styles.banner}>
         <Image 
@@ -22,6 +22,6 @@ export default async function Banner() {
         </div>
       </div>
     </div>
-    </div>
+    </section>
   );
 }

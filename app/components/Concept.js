@@ -22,7 +22,7 @@ const conceptItems = [
 
 export default function Concept() {
   return (
-    <div section id="concept">
+    <section id="concept">
     <div className={styles.conceptContainer}>
       <div className={styles.conceptTitle}>Concept</div>
       <div className={styles.conceptGrid}>
@@ -45,6 +45,6 @@ export default function Concept() {
         ))}
       </div>
     </div>
-    </div>
+    </section>
   );
 }

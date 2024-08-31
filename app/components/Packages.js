@@ -41,7 +41,7 @@ const packages = [
 
 export default function Packages() {
   return (
-    <div section id="packages">
+    <section id="packages">
     <div className={styles.packageContainer}>
       <h2 className={styles.packagesTitle}>Packages</h2>
       <div className={styles.packageList}>
@@ -65,6 +65,6 @@ export default function Packages() {
         ))}
       </div>
     </div>
-    </div>
+    </section>
   );
 }

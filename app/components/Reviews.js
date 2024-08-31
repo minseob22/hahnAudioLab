@@ -48,7 +48,7 @@ export default async function Reviews() {
   const reviewList = Array.from(reviewMap.values());
 
   return (
-    <div section id="reviews">
+    <section id="reviews">
     <div className={styles.reviewsContainer}>
       <h2 className={styles.reviewsTitle}>Reviews</h2>     
       <div className={styles.reviewsGrid}>
@@ -76,6 +76,6 @@ export default async function Reviews() {
         ))}
       </div>
     </div>
-    </div>
+    </section>
   );
 }
