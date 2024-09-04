@@ -1,81 +1,61 @@
 import Link from 'next/link';
-import sqlite3 from 'sqlite3';
-import { open } from 'sqlite';
+import fs from 'fs';
+import path from 'path';
 import styles from './Reviews.module.css';
 
-function getBase64Image(binaryData) {
-  return `data:image/jpeg;base64,${binaryData.toString('base64')}`;
-}
+export default function Reviews() {
+  const reviewsDirectory = path.join(process.cwd(), 'app/reviews/reviewsData');
+  const filenames = fs.readdirSync(reviewsDirectory);
 
-export default async function Reviews() {
-  // SQLite 데이터베이스 연결
-  const db = await open({
-    filename: './db/reviews.db', 
-    driver: sqlite3.Database
+  const reviewList = filenames.map((filename) => {
+    const filePath = path.join(reviewsDirectory, filename);
+    const fileContents = fs.readFileSync(filePath, 'utf8');
+    const review = JSON.parse(fileContents);
+    
+    return {
+      review_id: review.id,
+      title: review.title,
+      thumbnail: review.thumbnail,
+      text: review.contents ? review.contents
+        .filter(c => c.type === 'text')
+        .map(c => c.content)
+        .join(' ')
+        .substring(0, 100) : '', // contents가 없을 경우 빈 문자열을 반환
+      images: review.contents ? review.contents
+        .filter(c => c.type === 'image')
+        .map(c => c.content) : [] // contents가 없을 경우 빈 배열을 반환
+    };
   });
-
-  const reviews = await db.all(`
-    SELECT r.id as review_id, r.title, c.content, c.type 
-    FROM reviews r
-    LEFT JOIN contents c ON r.id = c.review_id
-    ORDER BY r.id DESC, c.content_order
-  `);
-
-  // 리뷰 데이터를 재구성합니다.
-  const reviewMap = new Map();
-
-  reviews.forEach((row) => {
-    const { review_id, title, content, type } = row;
-
-    if (!reviewMap.has(review_id)) {
-      reviewMap.set(review_id, {
-        review_id, // review_id를 리뷰 데이터에 포함시킵니다.
-        title,
-        images: [],
-        text: '',
-      });
-    }
-
-    const reviewData = reviewMap.get(review_id);
-
-    if (type === 'image') {
-      reviewData.images.push(getBase64Image(content));
-    } else if (type === 'text') {
-      reviewData.text += content + ' '; 
-    }
-  });
-
-  const reviewList = Array.from(reviewMap.values());
 
   return (
     <section id="reviews">
-    <div className={styles.reviewsContainer}>
-      <h2 className={styles.reviewsTitle}>Reviews</h2>     
-      <div className={styles.reviewsGrid}>
-        {reviewList.map((review) => (
-          <Link 
-          href={`/reviews/${review.review_id}`} 
-          key={review.review_id} 
-          passHref
-          style={{ textDecoration: 'none' }}
-        >
-            <div className={styles.reviewItem}>
-              {review.images.length > 0 && (
-                <img 
-                  src={review.images[0]} 
-                  alt={review.title}
-                  className={styles.image}
-                />
-              )}
-              <div className={styles.textContent}>
-              <h3 className={styles.noDecoration}>{review.title}</h3>
-              <p className={styles.noDecoration}>{review.text.substring(0, 100)}</p>
+      <div className={styles.reviewsContainer}>
+        <h2 className={styles.reviewsTitle}>Reviews</h2>     
+        <div className={styles.reviewsGrid}>
+          {reviewList.map((review) => (
+            <Link 
+              href={`/reviews/${review.review_id}`} 
+              key={review.review_id} 
+              passHref
+              style={{ textDecoration: 'none' }}
+            >
+              <div className={styles.reviewItem}>
+                {review.images.length > 0 && (
+                  <img 
+                    src={review.thumbnail} 
+                    alt={review.title}
+                    className={styles.image}
+                  />
+                )}
+                <div className={styles.textContent}>
+                  <h3 className={styles.noDecoration}>{review.title}</h3>
+                  <p className={styles.noDecoration}>{review.text}</p>
+                </div>
               </div>
-            </div>
-          </Link>
-        ))}
+            </Link>
+          ))}
+        </div>
       </div>
-    </div>
     </section>
   );
 }

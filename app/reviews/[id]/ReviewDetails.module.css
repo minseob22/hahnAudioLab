@@ -14,17 +14,17 @@
   }
   
   .reviewHeader h2 {
-    font-size: 2em;
-    margin: 100px 0 20px 0; /* Adjust as necessary for spacing */
+    font-size: 25px;
+    margin: 100px 0 20px 0; 
     position: relative;
   }
   
   .reviewHeader h2::before {
     content: "Review";
     display: block;
-    font-size: 1em;
+    font-size: 18px;
     color: #666;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
   }
   
   .reviewHeader h2::after {
@@ -37,7 +37,7 @@
   }
   
   .reviewContent {
-    font-size: 1.1em;
+    font-size: 18px;
     line-height: 1.6em;
     margin-bottom: 20px;
   }
