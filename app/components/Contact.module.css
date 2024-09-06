@@ -27,8 +27,8 @@
 .contactItem img {
   width: 50px;
   height: 50px;
-  margin-right: 40px; /* Increased space between image and text */
-  max-width: 50px; /* Prevent the image from stretching horizontally */
+  margin-right: 40px; 
+  max-width: 50px; 
 }
 
 .contactItem a {
@@ -48,14 +48,14 @@
   text-decoration: underline;
 }
 
-/* Mobile Styles */
+
 @media (max-width: 1024px) {
   .contactsContent {
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
+    flex-direction: column; 
+    align-items: center; 
   }
   .contactItem {
-    flex-direction: column; /* Stack image and text vertically within each item */
+    flex-direction: column; 
     align-items: center;
     margin: 10px 0;
     max-width: 100%;
@@ -63,8 +63,8 @@
   .contactItem img {
     width: 50px; 
     height: 50px; 
-    max-width: 50px; /* Prevent the image from stretching horizontally */
+    max-width: 50px; 
     margin-right: 0; 
-    margin-bottom: 10px; /* Space below the image */
+    margin-bottom: 10px; 
   }
 }
