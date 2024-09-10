@@ -1,18 +1,27 @@
-import React from 'react';
 import fs from 'fs';
 import path from 'path';
 import styles from './ReviewDetails.module.css';
 
-export default function ReviewDetails({ params }) {
-  const { id } = params;
-
+// 리뷰 데이터를 읽어들이는 함수 (서버에서만 실행됨)
+async function getReviewData(id) {
   const filePath = path.join(process.cwd(), 'app/reviews/reviewsData', `review_${id}.json`);
+  
   if (!fs.existsSync(filePath)) {
-    return <div>Review not found</div>;
+    return null;
   }
 
   const fileContents = fs.readFileSync(filePath, 'utf8');
-  const review = JSON.parse(fileContents);
+  return JSON.parse(fileContents);
+}
+
+// 페이지 컴포넌트
+export default async function ReviewDetails({ params }) {
+  const { id } = params;
+  const review = await getReviewData(id);
+
+  if (!review) {
+    return <div>Review not found</div>;
+  }
 
   const reviewTitle = review.title;
 
@@ -26,10 +35,10 @@ export default function ReviewDetails({ params }) {
           {item.type === 'text' && (
             <p className={styles.reviewContent}>
               {item.content.split('\n').map((line, index) => (
-                <React.Fragment key={index}>
+                <>
                   {line}
                   <br />
-                </React.Fragment>
+                </>
               ))}
             </p>
           )}
@@ -44,4 +53,16 @@ export default function ReviewDetails({ params }) {
       ))}
     </div>
   );
+}
+
+// 빌드 시 모든 동적 경로에 대한 매개변수 생성
+export async function generateStaticParams() {
+  const reviewsDir = path.join(process.cwd(), 'app/reviews/reviewsData');
+  const filenames = fs.readdirSync(reviewsDir);
+
+  return filenames.map((filename) => {
+    return {
+      id: filename.replace('review_', '').replace('.json', ''),
+    };
+  });
 }
