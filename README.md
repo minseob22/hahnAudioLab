@@ -1,2 +1,2 @@
-### https://minseob22.github.io/hahnAudioLab/#philosophy
+### https://minseob22.github.io/hahnAudioLab
 
