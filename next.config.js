@@ -1,10 +1,11 @@
-// next.config.js
 module.exports = {
-    output: 'export',
-    images: {
-      unoptimized: true, // 이미지 최적화 비활성화
-    },
-    basePath: '/hahnAudioLab',
-    assetPrefix: '/hahnAudioLab/',
-  };
-  
+  basePath: '/hahnAudioLab', // 필요한 리포지토리 경로를 설정
+  output: 'export',
+  images: {
+    unoptimized: true,
+  },
+  assetPrefix:
+    process.env.NODE_ENV === "production"
+      ? "https://minseob22.github.io/hahnAudioLab"
+      : "",
+};
