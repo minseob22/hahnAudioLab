@@ -1,68 +1,92 @@
 import fs from 'fs';
 import path from 'path';
+import Link from 'next/link'; // Link 컴포넌트 추가
 import styles from './ReviewDetails.module.css';
 
-// 리뷰 데이터를 읽어들이는 함수 (서버에서만 실행됨)
+// 리뷰 데이터를 가져오는 함수
 async function getReviewData(id) {
-  const filePath = path.join(process.cwd(), 'app/reviews/reviewsData', `review_${id}.json`);
+  // 파일 경로를 프로젝트 내 정확한 위치로 지정
+  const filePath = path.join(process.cwd(), 'app/reviews/reviewTotal/reviewTotal.json');
   
-  if (!fs.existsSync(filePath)) {
-    return null;
-  }
-
+  // JSON 파일을 읽고 파싱
   const fileContents = fs.readFileSync(filePath, 'utf8');
-  return JSON.parse(fileContents);
+  const reviewsData = JSON.parse(fileContents);
+
+  // ID에 맞는 리뷰 찾기
+  const review = reviewsData.reviews.find((review) => review.id === parseInt(id));
+  return { review, reviewsData };
 }
 
 // 페이지 컴포넌트
 export default async function ReviewDetails({ params }) {
   const { id } = params;
-  const review = await getReviewData(id);
+  const { review, reviewsData } = await getReviewData(id);
 
   if (!review) {
     return <div>Review not found</div>;
   }
 
-  const reviewTitle = review.title;
+  const currentId = parseInt(id);
+  const nextReview = reviewsData.reviews.find((r) => r.id === currentId + 1);
+  const prevReview = reviewsData.reviews.find((r) => r.id === currentId - 1);
 
   return (
     <div className={styles.pageContainer}>
       <div className={styles.reviewHeader}>
-        <h2 className={styles.reviewTitle}>{reviewTitle}</h2>
+        <h2 className={styles.reviewTitle}>{review.title}</h2>
       </div>
-      {review.contents.map((item, index) => (
-        <div key={index} className={styles.contentBlock}>
-          {item.type === 'text' && (
-            <p className={styles.reviewContent}>
-              {item.content.split('\n').map((line, index) => (
-                <>
-                  {line}
-                  <br />
-                </>
-              ))}
-            </p>
-          )}
-          {item.type === 'image' && (
-            <img 
-              className={styles.reviewImage} 
-              src={item.content} 
-              alt={`Content Image ${index}`} 
-            />
-          )}
-        </div>
-      ))}
+      <div className={styles.contentBlock}>
+        {/* HTML 컨텐츠를 안전하게 렌더링 */}
+        <div
+          className={styles.reviewContent}
+          dangerouslySetInnerHTML={{ __html: review.content }}
+        />
+
+        {/* 이미지 렌더링 */}
+        {review.img && (
+          <div
+            className={styles.reviewImages}
+            dangerouslySetInnerHTML={{ __html: review.img }}
+          />
+        )}
+      </div>
+
+      {/* 다음 글, 이전 글, 목록으로 돌아가기 버튼 */}
+      <div className={styles.navigation}>
+        {prevReview && (
+          <Link href={`/reviews/${prevReview.id}`}>
+            <button className={`${styles.btn} ${styles.btnPrimary}`}>
+              ▲ {prevReview.title}
+            </button>
+          </Link>
+        )}
+        {nextReview && (
+          <Link href={`/reviews/${nextReview.id}`}>
+            <button className={`${styles.btn} ${styles.btnPrimary}`}>
+              ▼ {nextReview.title}
+            </button>
+          </Link>
+        )}
+      </div>
+      <div className={styles.navigation}>
+        <Link href="/reviews">
+          <button className={`${styles.btn} ${styles.btnPrimary}`}>
+            목록
+          </button>
+        </Link>
+      </div>
     </div>
   );
 }
 
-// 빌드 시 모든 동적 경로에 대한 매개변수 생성
 export async function generateStaticParams() {
-  const reviewsDir = path.join(process.cwd(), 'app/reviews/reviewsData');
-  const filenames = fs.readdirSync(reviewsDir);
+  const filePath = path.join(process.cwd(), 'app/reviews/reviewTotal/reviewTotal.json');
+  const fileContents = fs.readFileSync(filePath, 'utf8');
+  const reviewsData = JSON.parse(fileContents);
 
-  return filenames.map((filename) => {
-    return {
-      id: filename.replace('review_', '').replace('.json', ''),
-    };
-  });
+  const reviewIds = reviewsData.reviews.map((review) => ({
+    id: review.id.toString(),
+  }));
+
+  return reviewIds;
 }
