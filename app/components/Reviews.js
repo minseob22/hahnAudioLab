@@ -7,7 +7,12 @@ import styles from './Reviews.module.css';
 export async function fetchReviewsData() {
   const filePath = path.join(process.cwd(), 'app/reviews/reviewTotal/reviewTotal.json');
   const jsonData = await fs.promises.readFile(filePath, 'utf8');
-  return JSON.parse(jsonData);
+  const data = JSON.parse(jsonData);
+
+  // 리뷰 데이터를 내림차순으로 정렬 (예: id 기준)
+  data.reviews.sort((a, b) => b.id - a.id);
+
+  return data;
 }
 
 export default async function ReviewsPage() {

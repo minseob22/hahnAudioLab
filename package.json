@@ -5,10 +5,16 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+
+    "preexport": "rimraf out",
+    "export": "next export",
+    "touch": "touch out/.nojekyll",
+    "posttouch": "touch out/_next/.nojekyll",
+
     "start": "next start",
     "test": "echo \"Error: no test specified\" && exit 1",
     "predeploy": "npm run build",
-    "deploy": "echo. > out/.nojekyll && gh-pages -d out --dotfiles"
+    "deploy": "echo.> out/.nojekyll && gh-pages -d out --dotfiles"
   },
   "keywords": [],
   "author": "",
