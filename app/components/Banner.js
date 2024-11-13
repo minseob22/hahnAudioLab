@@ -5,6 +5,7 @@ export default async function Banner() {
   const data = {
     title: "Hahn Audio Lab",
     imageSrc:"/hahnAudioLab/img/62582a53409ff.jpg"
+
   };
 
   return (
