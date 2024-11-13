@@ -1,6 +1,7 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import Link from 'next/link';
 import styles from './Navigation.module.css'; // 스타일 파일
 
 export default function Navigation() {
@@ -18,7 +19,7 @@ export default function Navigation() {
     <header className={styles.header}>
       <div className={styles.navBar}>
         <div className={styles.brand}>
-          <h1 className={styles.mobileBrand}>Hahn Audio Lab</h1> 
+          <h1 className={styles.mobileBrand}>Hahn Audio Lab</h1>
         </div>
         <div className={styles.hamburger} onClick={toggleMenu}>
           <div className={styles.bar}></div>
@@ -28,34 +29,50 @@ export default function Navigation() {
       </div>
       <nav className={`${styles.nav} ${menuOpen ? styles.open : ''}`}>
         <ul className={styles.navList}>
-          
           <li className={`${styles.navItem} ${styles.mobileOnly}`}>
-            <a href="/#banner" onClick={closeMenu}>Home</a>
-          </li>
-
-          <li className={styles.navItem}>
-            <a href="/#philosophy" onClick={closeMenu}>Philosophy</a>
+            <Link href="#banner" onClick={closeMenu}>
+              Home
+            </Link>
           </li>
           <li className={styles.navItem}>
-            <a href="/#concept" onClick={closeMenu}>Concept</a>
+            <Link href="#philosophy" onClick={closeMenu}>
+              Philosophy
+            </Link>
           </li>
           <li className={styles.navItem}>
-            <a href="/#products" onClick={closeMenu}>Products</a>
+            <Link href="#concept" onClick={closeMenu}>
+              Concept
+            </Link>
           </li>
           <li className={styles.navItem}>
-            <a href="/#packages" onClick={closeMenu}>Packages</a>
+            <Link href="#products" onClick={closeMenu}>
+              Products
+            </Link>
           </li>
           <li className={styles.navItem}>
-            <a href="/#reviews" onClick={closeMenu}>Reviews</a>
+            <Link href="#packages" onClick={closeMenu}>
+              Packages
+            </Link>
           </li>
           <li className={styles.navItem}>
-            <a href="/#policy" onClick={closeMenu}>Policy</a>
+            <Link href="#reviews" onClick={closeMenu}>
+              Reviews
+            </Link>
           </li>
           <li className={styles.navItem}>
-            <a href="https://blog.naver.com/gksehdgns06" target="_blank" rel="noopener noreferrer">Blog</a>
+            <Link href="#policy" onClick={closeMenu}>
+              Policy
+            </Link>
           </li>
           <li className={styles.navItem}>
-            <a href="/#contacts" onClick={closeMenu}>Contacts</a>
+            <a href="https://blog.naver.com/gksehdgns06" target="_blank" rel="noopener noreferrer">
+              Blog
+            </a>
+          </li>
+          <li className={styles.navItem}>
+            <Link href="#contacts" onClick={closeMenu}>
+              Contacts
+            </Link>
           </li>
         </ul>
       </nav>
