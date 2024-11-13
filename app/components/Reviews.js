@@ -26,7 +26,7 @@ export default async function ReviewsPage() {
         <h2 className={styles.reviewsTitle}>Reviews</h2>
         <div className={styles.reviewsGrid}>
           {reviewList.map((review) => (
-            <Link href={`/reviews/${review.id}`} key={review.id}>
+            <Link href={`/reviews/${review.id}/`} key={review.id}>
               <div className={styles.reviewItem}>
                 <img src={review.thumbnail} alt={review.title} className={styles.image} />
                 <div className={styles.textContent}>

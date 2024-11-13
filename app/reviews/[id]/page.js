@@ -61,7 +61,7 @@ export default async function ReviewDetails({ params }) {
           </Link>
         )}
         {nextReview && (
-          <Link href={`/reviews/${nextReview.id}`}>
+          <Link href={`/reviews/${nextReview.id}/`}>
             <button className={`${styles.btn} ${styles.btnPrimary}`}>
               ▼ {nextReview.title}
             </button>
@@ -69,7 +69,7 @@ export default async function ReviewDetails({ params }) {
         )}
       </div>
       <div className={styles.navigation}>
-        <Link href="/reviews">
+      <Link href={`https://minseob22.github.io/hahnAudioLab//#reviews`}>
           <button className={`${styles.btn} ${styles.btnPrimary}`}>
             목록
           </button>
