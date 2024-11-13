@@ -5,10 +5,10 @@ import styles from './Product.module.css';
 const products = [
   {
     images: [
-      '/img/KT88.png',
-      '/img/KT120.png',
-      '/img/KT150.png',
-      '/img/EL156.png',
+      '/hahnAudioLab/img/KT88.png',
+      '/hahnAudioLab/img/KT120.png',
+      '/hahnAudioLab/img/KT150.png',
+      '/hahnAudioLab/img/EL156.png',
     ],
     title: '거실형 진공관앰프',
     description: (
@@ -22,7 +22,7 @@ const products = [
     ),
   },
   {
-    images: ['/img/personal_amp.jpg'],
+    images: ['/hahnAudioLab/img/personal_amp.jpg'],
     title: '개인형 진공관앰프',
     description: (
       <>

@@ -1,7 +1,7 @@
 {
     "id": 15,
     "title": "우리에게도 더 좋은 날이 올 것이네",
-    "thumbnail": "/img/8cc1284e9ed73.jpeg",
+    "thumbnail":"/hahnAudioLab/img/8cc1284e9ed73.jpeg",
     "contents": [
       {
         "type": "text",
@@ -37,12 +37,12 @@
       },
       {
         "type": "image",
-        "content": "/img/8cc1284e9ed73.jpeg",
+        "content":"/hahnAudioLab/img/8cc1284e9ed73.jpeg",
         "caption": ""
       },
       {
         "type": "image",
-        "content": "/img/23ad4a5c965ac.jpeg",
+        "content":"/hahnAudioLab/img/23ad4a5c965ac.jpeg",
         "caption": ""
       }
     ]

@@ -1,7 +1,7 @@
 {
     "id": 4,
     "title": "나의 첫 진공관 앰프는 부드럽고 자연스런 소리로 나를 감싸 안았다.",
-    "thumbnail": "/img/3e99fa449d291.jpeg",
+    "thumbnail":"/hahnAudioLab/img/3e99fa449d291.jpeg",
     "contents": [
       {
         "type": "text",
@@ -25,12 +25,12 @@
       },
       {
         "type": "image",
-        "content": "/img/3e99fa449d291.jpeg",
+        "content":"/hahnAudioLab/img/3e99fa449d291.jpeg",
         "caption": ""
       },
       {
         "type": "image",
-        "content": "/img/fbc6031c4bd7f.png",
+        "content":"/hahnAudioLab/img/fbc6031c4bd7f.png",
         "caption": ""
       }
     ]

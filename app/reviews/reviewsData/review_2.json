@@ -1,7 +1,7 @@
 {
   "id": 2,
   "title": "저는 한오디오랩 대표와 1982년부터 알고 지내는 사이입니다.",
-  "thumbnail": "/img/c52bf86be5e99.png",
+  "thumbnail":"/hahnAudioLab/img/c52bf86be5e99.png",
   "contents": [
     {
       "type": "text",
@@ -41,11 +41,11 @@
     },
     {
       "type": "image",
-      "content": "/img/5c220fc8bc997.png"
+      "content":"/hahnAudioLab/img/5c220fc8bc997.png"
     },
     {
       "type": "image",
-      "content": "/img/c52bf86be5e99.png"
+      "content":"/hahnAudioLab/img/c52bf86be5e99.png"
     },
     {
       "type": "text",

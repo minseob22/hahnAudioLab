@@ -1,7 +1,7 @@
 {
     "id": 6,
     "title": "진공관오디오를 통해서 흘러 나오는 낡은 LP판 음악들은 방전된 나의 영혼을 충전시켜 주곤 한다.",
-    "thumbnail": "/img/084fd642616b0.jpeg",
+    "thumbnail":"/hahnAudioLab/img/084fd642616b0.jpeg",
     "contents": [
       {
         "type": "text",
@@ -25,12 +25,12 @@
       },
       {
         "type": "image",
-        "content": "/img/084fd642616b0.jpeg",
+        "content":"/hahnAudioLab/img/084fd642616b0.jpeg",
         "caption": ""
       },
       {
         "type": "image",
-        "content": "/img/127d7586984d7.png",
+        "content":"/hahnAudioLab/img/127d7586984d7.png",
         "caption": ""
       }
     ]

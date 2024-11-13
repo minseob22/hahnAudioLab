@@ -1,7 +1,7 @@
 {
     "id": 16,
     "title": "코로나 블루가 지속되는 가운데 가족끼리 보내는 시간이 많아진다.",
-    "thumbnail": "/img/5b3e4d83bf829.jpg",
+    "thumbnail":"/hahnAudioLab/img/5b3e4d83bf829.jpg",
     "contents": [
       {
         "type": "text",
@@ -70,12 +70,12 @@
       },
       {
         "type": "image",
-        "content": "/img/e55fd502de8a3.jpg",
+        "content":"/hahnAudioLab/img/e55fd502de8a3.jpg",
         "caption": ""
       },
       {
         "type": "image",
-        "content": "/img/c9e2ed8457bc3.jpg",
+        "content":"/hahnAudioLab/img/c9e2ed8457bc3.jpg",
         "caption": ""
       }
     ]

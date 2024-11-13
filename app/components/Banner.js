@@ -4,7 +4,7 @@ import styles from './Banner.module.css';
 export default async function Banner() {
   const data = {
     title: "Hahn Audio Lab",
-    imageSrc: "/img/62582a53409ff.jpg"
+    imageSrc:"/hahnAudioLab/img/62582a53409ff.jpg"
   };
 
   return (

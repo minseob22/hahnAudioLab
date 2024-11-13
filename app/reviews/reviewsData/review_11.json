@@ -1,7 +1,7 @@
 {
     "id": 11,
     "title": "우리 부부 공동의 취미가 생겼어요",
-    "thumbnail": "/img/f90440848e34b.jpg",
+    "thumbnail":"/hahnAudioLab/img/f90440848e34b.jpg",
     "contents": [
       {
         "type": "text",
@@ -49,17 +49,17 @@
       },
       {
         "type": "image",
-        "content": "/img/f90440848e34b.jpg",
+        "content":"/hahnAudioLab/img/f90440848e34b.jpg",
         "caption": ""
       },
       {
         "type": "image",
-        "content": "/img/2cf30a9ff2333.jpg",
+        "content":"/hahnAudioLab/img/2cf30a9ff2333.jpg",
         "caption": ""
       },
       {
         "type": "image",
-        "content": "/img/4417e0705e2ab.jpg",
+        "content":"/hahnAudioLab/img/4417e0705e2ab.jpg",
         "caption": ""
       }
     ]

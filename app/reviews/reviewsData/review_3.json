@@ -1,7 +1,7 @@
 {
   "id": 3,
   "title": "무엇보다도 오래 들어도 귀가 피곤하지가 않다. 이건 정말 큰 선물이라고 할 수 밖에……",
-  "thumbnail": "/img/bfe9733e35190.jpg",
+  "thumbnail":"/hahnAudioLab/img/bfe9733e35190.jpg",
   "contents": [
     {
       "type": "text",
@@ -45,12 +45,12 @@
     },
     {
       "type": "image",
-      "content": "/img/bfe9733e35190.jpg",
+      "content":"/hahnAudioLab/img/bfe9733e35190.jpg",
       "caption": "[이전]"
     },
     {
       "type": "image",
-      "content": "/img/e073b33480f97.jpg",
+      "content":"/hahnAudioLab/img/e073b33480f97.jpg",
       "caption": "[현재]"
     }
   ]

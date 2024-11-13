@@ -4,5 +4,7 @@ module.exports = {
     images: {
       unoptimized: true, // 이미지 최적화 비활성화
     },
+    basePath: '/hahnAudioLab',
+    assetPrefix: '/hahnAudioLab/',
   };
   

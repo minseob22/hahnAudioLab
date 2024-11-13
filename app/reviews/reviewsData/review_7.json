@@ -1,7 +1,7 @@
 {
     "id": 7,
     "title": "TV 만 보던 아내와 아이들도 어느 새인가...",
-    "thumbnail": "/img/7a01dfeb7d924.jpeg",
+    "thumbnail":"/hahnAudioLab/img/7a01dfeb7d924.jpeg",
     "contents": [
       {
         "type": "text",
@@ -25,12 +25,12 @@
       },
       {
         "type": "image",
-        "content": "/img/7a01dfeb7d924.jpeg",
+        "content":"/hahnAudioLab/img/7a01dfeb7d924.jpeg",
         "caption": ""
       },
       {
         "type": "image",
-        "content": "/img/8572a08f770b1.jpeg",
+        "content":"/hahnAudioLab/img/8572a08f770b1.jpeg",
         "caption": ""
       }
     ]

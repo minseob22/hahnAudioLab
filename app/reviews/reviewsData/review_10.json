@@ -1,7 +1,7 @@
 {
     "id": 10,
     "title": "좋은 오디오는 장르에 상관없이 좋은 소리를 만들어 내는 것 같습니다",
-    "thumbnail": "/img/fea4c6078616d.jpg",
+    "thumbnail":"/hahnAudioLab/img/fea4c6078616d.jpg",
     "contents": [
       {
         "type": "text",
@@ -29,12 +29,12 @@
       },
       {
         "type": "image",
-        "content": "/img/fea4c6078616d.jpg",
+        "content":"/hahnAudioLab/img/fea4c6078616d.jpg",
         "caption": ""
       },
       {
         "type": "image",
-        "content": "/img/6ebd3ae031a4e.jpg",
+        "content":"/hahnAudioLab/img/6ebd3ae031a4e.jpg",
         "caption": ""
       }
     ]

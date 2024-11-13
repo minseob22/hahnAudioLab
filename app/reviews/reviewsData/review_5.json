@@ -1,7 +1,7 @@
 {
     "id": 5,
     "title": "요즘 나는 주말에 좋은 음악 연주를 들으면서 휴식을 즐기는 즐거움으로 가득하다.",
-    "thumbnail": "/img/1d83467b8b059.jpg",
+    "thumbnail":"/hahnAudioLab/img/1d83467b8b059.jpg",
     "contents": [
       {
         "type": "text",
@@ -25,12 +25,12 @@
       },
       {
         "type": "image",
-        "content": "/img/1d83467b8b059.jpg",
+        "content":"/hahnAudioLab/img/1d83467b8b059.jpg",
         "caption": ""
       },
       {
         "type": "image",
-        "content": "/img/53cd94f3fb112.jpg",
+        "content":"/hahnAudioLab/img/53cd94f3fb112.jpg",
         "caption": ""
       }
     ]

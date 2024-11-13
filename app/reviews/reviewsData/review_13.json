@@ -1,7 +1,7 @@
 {
     "id": 13,
     "title": "내 삶의 품격을 올리다.",
-    "thumbnail": "/img/6c43c9854c4a4.jpg",
+    "thumbnail":"/hahnAudioLab/img/6c43c9854c4a4.jpg",
     "contents": [
       {
         "type": "text",
@@ -29,7 +29,7 @@
       },
       {
         "type": "image",
-        "content": "/img/67507090bd1c0.jpg",
+        "content":"/hahnAudioLab/img/67507090bd1c0.jpg",
         "caption": ""
       },
       {
@@ -39,7 +39,7 @@
       },
       {
         "type": "image",
-        "content": "/img/cfafaf1f53152.jpg",
+        "content":"/hahnAudioLab/img/cfafaf1f53152.jpg",
         "caption": ""
       }
     ]

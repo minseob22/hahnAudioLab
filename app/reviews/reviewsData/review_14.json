@@ -1,7 +1,7 @@
 {
     "id": 14,
     "title": "내 영혼의 동반자",
-    "thumbnail": "/img/f0887503f5fbb.jpg",
+    "thumbnail":"/hahnAudioLab/img/f0887503f5fbb.jpg",
     "contents": [
       {
         "type": "text",
@@ -41,12 +41,12 @@
       },
       {
         "type": "image",
-        "content": "/img/1e801e115dda6.jpg",
+        "content":"/hahnAudioLab/img/1e801e115dda6.jpg",
         "caption": ""
       },
       {
         "type": "image",
-        "content": "/img/f0887503f5fbb.jpg",
+        "content":"/hahnAudioLab/img/f0887503f5fbb.jpg",
         "caption": ""
       }
     ]

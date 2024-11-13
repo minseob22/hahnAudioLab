@@ -1,7 +1,7 @@
 {
     "id": 9,
     "title": "음악에 관심을 가지면서 오디오를 장만한 게 아니라 오디오를 갖고 나서 음악이 나에게 다가온 것이다.",
-    "thumbnail": "/img/f316829a03931.jpg",
+    "thumbnail":"/hahnAudioLab/img/f316829a03931.jpg",
     "contents": [
       {
         "type": "text",
@@ -41,7 +41,7 @@
       },
       {
         "type": "image",
-        "content": "/img/f316829a03931.jpg",
+        "content":"/hahnAudioLab/img/f316829a03931.jpg",
         "caption": ""
       }
     ]

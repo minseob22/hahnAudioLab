@@ -1,7 +1,7 @@
 {
     "id": 1,
     "title": "[인터뷰] “따뜻한 소리 만듭니다” 베이비부머 KT맨의 ‘인생 2막’",
-    "thumbnail": "/img/472ff5481ca97.jpeg",
+    "thumbnail":"/hahnAudioLab/img/472ff5481ca97.jpeg",
     "contents": [
       {
         "type": "text",
@@ -9,7 +9,7 @@
       },
       {
         "type": "image",
-        "content": "/img/472ff5481ca97.jpeg"
+        "content":"/hahnAudioLab/img/472ff5481ca97.jpeg"
       }
     ]
   }
