@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import Link from 'next/link'; // Link 컴포넌트 추가
+import Link from 'next/link';
 import styles from './ReviewDetails.module.css';
 
 // 리뷰 데이터를 가져오는 함수
@@ -54,7 +54,7 @@ export default async function ReviewDetails({ params }) {
       {/* 다음 글, 이전 글, 목록으로 돌아가기 버튼 */}
       <div className={styles.navigation}>
         {prevReview && (
-          <Link href={`/reviews/${prevReview.id}`}>
+          <Link href={`/reviews/${prevReview.id}/`}>
             <button className={`${styles.btn} ${styles.btnPrimary}`}>
               ▲ {prevReview.title}
             </button>
