@@ -52,25 +52,25 @@ export default async function ReviewDetails({ params }) {
       </div>
 
       {/* 다음 글, 이전 글, 목록으로 돌아가기 버튼 */}
+        <div className={styles.navigation}>
+          {prevReview && (
+            <Link href={`/reviews/${prevReview.id}/`}>
+              <button className={styles.btnNav}>
+                ▲ {prevReview.title}
+              </button>
+            </Link>
+          )}
+          {nextReview && (
+            <Link href={`/reviews/${nextReview.id}/`}>
+              <button className={styles.btnNav}>
+                ▼ {nextReview.title}
+              </button>
+            </Link>
+          )}
+        </div>
       <div className={styles.navigation}>
-        {prevReview && (
-          <Link href={`/reviews/${prevReview.id}/`}>
-            <button className={`${styles.btn} ${styles.btnPrimary}`}>
-              ▲ {prevReview.title}
-            </button>
-          </Link>
-        )}
-        {nextReview && (
-          <Link href={`/reviews/${nextReview.id}/`}>
-            <button className={`${styles.btn} ${styles.btnPrimary}`}>
-              ▼ {nextReview.title}
-            </button>
-          </Link>
-        )}
-      </div>
-      <div className={styles.navigation}>
-      <Link href={`https://minseob22.github.io/hahnAudioLab//#reviews`}>
-          <button className={`${styles.btn} ${styles.btnPrimary}`}>
+        <Link href={`https://minseob22.github.io/hahnAudioLab//#reviews`}>
+          <button className={styles.btnList}>
             목록
           </button>
         </Link>
