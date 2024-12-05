@@ -31,37 +31,37 @@ export default function Navigation() {
       <nav className={`${styles.nav} ${menuOpen ? styles.open : ''}`}>
         <ul className={styles.navList}>
           <li className={`${styles.navItem} ${styles.mobileOnly}`}>
-            <Link href={`https://minseob22.github.io/hahnAudioLab//#banner`} onClick={closeMenu}>
+            <Link href={`//#banner`} onClick={closeMenu}>
               Home
             </Link>
           </li>
           <li className={styles.navItem}>
-            <Link href={`https://minseob22.github.io/hahnAudioLab//#philosophy`} onClick={closeMenu}>
+            <Link href={`//#philosophy`} onClick={closeMenu}>
               Philosophy
             </Link>
           </li>
           <li className={styles.navItem}>
-            <Link href={`https://minseob22.github.io/hahnAudioLab//#concept`} onClick={closeMenu}>
+            <Link href={`//#concept`} onClick={closeMenu}>
               Concept
             </Link>
           </li>
           <li className={styles.navItem}>
-            <Link href={`https://minseob22.github.io/hahnAudioLab//#products`} onClick={closeMenu}>
+            <Link href={`//#products`} onClick={closeMenu}>
               Products
             </Link>
           </li>
           <li className={styles.navItem}>
-            <Link href={`https://minseob22.github.io/hahnAudioLab//#packages`} onClick={closeMenu}>
+            <Link href={`//#packages`} onClick={closeMenu}>
               Packages
             </Link>
           </li>
           <li className={styles.navItem}>
-            <Link href={`https://minseob22.github.io/hahnAudioLab//#reviews`} onClick={closeMenu}>
+            <Link href={`//#reviews`} onClick={closeMenu}>
               Reviews
             </Link>
           </li>
           <li className={styles.navItem}>
-            <Link href={`https://minseob22.github.io/hahnAudioLab//#policy`} onClick={closeMenu}>
+            <Link href={`//#policy`} onClick={closeMenu}>
               Policy
             </Link>
           </li>
@@ -71,7 +71,7 @@ export default function Navigation() {
             </a>
           </li>
           <li className={styles.navItem}>
-            <Link href={`https://minseob22.github.io/hahnAudioLab//#contacts`} onClick={closeMenu}>
+            <Link href={`//#contacts`} onClick={closeMenu}>
               Contacts
             </Link>
           </li>

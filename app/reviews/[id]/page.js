@@ -69,7 +69,7 @@ export default async function ReviewDetails({ params }) {
           )}
         </div>
       <div className={styles.navigation}>
-        <Link href={`https://minseob22.github.io/hahnAudioLab//#reviews`}>
+        <Link href={`/#reviews`}>
           <button className={styles.btnList}>
             목록
           </button>

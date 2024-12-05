@@ -16,7 +16,7 @@ export default function Philosophy() {
         <div className={styles.philosophyContent}>
           <div className={styles.imageBox}>
             <Image
-              src="/hahnAudioLab/img/27368be00be15.png"
+              src="/img/27368be00be15.png"
               alt="Philosophy"
               width={500}
               height={300}
