@@ -5,7 +5,7 @@ import styles from './Packages.module.css';
 
 const packages = [
   {
-    imgSrc: '/img/package_a.png',
+    imgSrc: '/img/optimized/package_a.png',
     title: 'Package Type A',
     description: '– living room with Focal Speaker',
     details: [
@@ -16,7 +16,7 @@ const packages = [
     ],
   },
   {
-    imgSrc: '/img/package_b.jpg',
+    imgSrc: '/img/optimized/package_b.jpg',
     title: 'Package Type B',
     description: '– personal',
     details: [
@@ -27,7 +27,7 @@ const packages = [
     ],
   },
   {
-    imgSrc: '/img/package_c.png',
+    imgSrc: '/img/optimized/package_c.png',
     title: 'Package Type C',
     description: '– bluetooth only',
     details: [
