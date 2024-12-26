@@ -22,7 +22,7 @@ const products = [
     ),
   },
   {
-    images: ['/img/optimized/personal_amp.jpg'],
+    images: ['/img/optimized/personal_amp.webp'],
     title: '개인형 진공관앰프',
     description: (
       <>

@@ -16,7 +16,7 @@ const packages = [
     ],
   },
   {
-    imgSrc: '/img/optimized/package_b.jpg',
+    imgSrc: '/img/optimized/package_b.webp',
     title: 'Package Type B',
     description: '– personal',
     details: [

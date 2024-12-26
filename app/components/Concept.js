@@ -7,7 +7,7 @@ const conceptItems = [
     text: '하드와이어링이라는 정통제작기법으로 만든 hand-made 제품',
   },
   {
-    imgSrc: '/img/optimized/62582a53409ff.jpg',
+    imgSrc: '/img/optimized/62582a53409ff.webp',
     text: '미니멀한 인터페이스',
   },
   {
@@ -15,7 +15,7 @@ const conceptItems = [
     text: '휴대폰 속 모든 음악을 연결하는 블루투스 인터페이스',
   },
   {
-    imgSrc: '/img/optimized/32c304232bfb3.jpg',
+    imgSrc: '/img/optimized/32c304232bfb3.webp',
     text: '고객이 원하는 장르와 취향을 반영한 맞춤형 제작',
   },
 ];
